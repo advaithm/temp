@@ -1,0 +1,1 @@
+{"rustc":66165631676752942,"features":"[\"alloc\"]","target":10361392095799806326,"profile":6299028598154287785,"path":3445708303091147637,"deps":[[10588648853679162947,"generic_array",false,15395078309676530758]],"local":[{"CheckDepInfo":{"dep_info":"debug/.fingerprint/aead-aefcda411f189df9/dep-lib-aead"}}],"rustflags":[],"metadata":1280595491824872380,"config":0}

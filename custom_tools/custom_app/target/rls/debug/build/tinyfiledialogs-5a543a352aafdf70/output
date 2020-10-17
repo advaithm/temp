@@ -1,0 +1,90 @@
+TARGET = Some("x86_64-unknown-linux-gnu")
+OPT_LEVEL = Some("0")
+HOST = Some("x86_64-unknown-linux-gnu")
+CC_x86_64-unknown-linux-gnu = None
+CC_x86_64_unknown_linux_gnu = None
+HOST_CC = None
+CC = None
+CFLAGS_x86_64-unknown-linux-gnu = None
+CFLAGS_x86_64_unknown_linux_gnu = None
+HOST_CFLAGS = None
+CFLAGS = None
+CRATE_CC_NO_DEFAULTS = None
+DEBUG = Some("true")
+CARGO_CFG_TARGET_FEATURE = Some("fxsr,sse,sse2")
+running: "cc" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-g" "-fno-omit-frame-pointer" "-m64" "-Wall" "-Wextra" "-v" "-o" "/home/nullrequest/egee-tools/distro-delves/custom_tools/custom_app/target/rls/debug/build/tinyfiledialogs-5a543a352aafdf70/out/libtinyfiledialogs/tinyfiledialogs.o" "-c" "libtinyfiledialogs/tinyfiledialogs.c"
+cargo:warning=Using built-in specs.
+cargo:warning=COLLECT_GCC=cc
+cargo:warning=Target: x86_64-pc-linux-gnu
+cargo:warning=Configured with: /home/nullrequest/gcc_arch/src/gcc/configure --prefix=/usr --libdir=/usr/lib --libexecdir=/usr/lib --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://bugs.archlinux.org/ --enable-languages=c,c++,ada,fortran,go,lto,objc,obj-c++,d --with-isl --with-linker-hash-style=gnu --with-system-zlib --enable-__cxa_atexit --enable-cet=auto --enable-checking=release --enable-clocale=gnu --enable-default-pie --enable-default-ssp --enable-gnu-indirect-function --enable-gnu-unique-object --enable-install-libiberty --enable-linker-build-id --enable-lto --enable-multilib --enable-plugin --enable-shared --enable-threads=posix --disable-libssp --disable-libstdcxx-pch --disable-libunwind-exceptions --disable-werror gdc_include_dir=/usr/include/dlang/gdc
+cargo:warning=Thread model: posix
+cargo:warning=Supported LTO compression algorithms: zlib zstd
+cargo:warning=gcc version 10.2.0 (GCC) 
+cargo:warning=COLLECT_GCC_OPTIONS='-O0' '-ffunction-sections' '-fdata-sections' '-fPIC' '-g' '-fno-omit-frame-pointer' '-m64' '-Wall' '-Wextra' '-v' '-o' '/home/nullrequest/egee-tools/distro-delves/custom_tools/custom_app/target/rls/debug/build/tinyfiledialogs-5a543a352aafdf70/out/libtinyfiledialogs/tinyfiledialogs.o' '-c' '-mtune=generic' '-march=x86-64'
+cargo:warning= /usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/cc1 -quiet -v libtinyfiledialogs/tinyfiledialogs.c -quiet -dumpbase tinyfiledialogs.c -m64 -mtune=generic -march=x86-64 -auxbase-strip /home/nullrequest/egee-tools/distro-delves/custom_tools/custom_app/target/rls/debug/build/tinyfiledialogs-5a543a352aafdf70/out/libtinyfiledialogs/tinyfiledialogs.o -g -O0 -Wall -Wextra -version -ffunction-sections -fdata-sections -fPIC -fno-omit-frame-pointer -o /tmp/ccM0hL0Z.s
+cargo:warning=GNU C17 (GCC) version 10.2.0 (x86_64-pc-linux-gnu)
+cargo:warning=	compiled by GNU C version 10.2.0, GMP version 6.2.0, MPFR version 4.1.0, MPC version 1.1.0, isl version isl-0.21-GMP
+cargo:warning=
+cargo:warning=GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+cargo:warning=ignoring nonexistent directory "/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../x86_64-pc-linux-gnu/include"
+cargo:warning=#include "..." search starts here:
+cargo:warning=#include <...> search starts here:
+cargo:warning= /usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include
+cargo:warning= /usr/local/include
+cargo:warning= /usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed
+cargo:warning= /usr/include
+cargo:warning=End of search list.
+cargo:warning=GNU C17 (GCC) version 10.2.0 (x86_64-pc-linux-gnu)
+cargo:warning=	compiled by GNU C version 10.2.0, GMP version 6.2.0, MPFR version 4.1.0, MPC version 1.1.0, isl version isl-0.21-GMP
+cargo:warning=
+cargo:warning=GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+cargo:warning=Compiler executable checksum: e9cb45a53d3c24b99218d17e6f85226d
+cargo:warning=libtinyfiledialogs/tinyfiledialogs.c:3311:20: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+cargo:warning= 3311 | static int * const getMajorMinorPatch( char const * const aExecutable )
+cargo:warning=      |                    ^~~~~~~~~~~~~~~~~~
+cargo:warning=libtinyfiledialogs/tinyfiledialogs.c: In function ‘sigHandler’:
+cargo:warning=libtinyfiledialogs/tinyfiledialogs.c:4063:28: warning: unused parameter ‘sig’ [-Wunused-parameter]
+cargo:warning= 4063 | static void sigHandler(int sig)
+cargo:warning=      |                        ~~~~^~~
+cargo:warning=libtinyfiledialogs/tinyfiledialogs.c: In function ‘tkinter2Present’:
+cargo:warning=libtinyfiledialogs/tinyfiledialogs.c:4000:51: warning: ‘%s’ directive writing up to 255 bytes into a region of size between 240 and 255 [-Wformat-overflow=]
+cargo:warning= 4000 |                     sprintf( lPythonCommand , "%s %s" , gPython2Name , lPythonParams ) ;
+cargo:warning=      |                                                   ^~                   ~~~~~~~~~~~~~
+cargo:warning=libtinyfiledialogs/tinyfiledialogs.c:4000:21: note: ‘sprintf’ output between 2 and 272 bytes into a destination of size 256
+cargo:warning= 4000 |                     sprintf( lPythonCommand , "%s %s" , gPython2Name , lPythonParams ) ;
+cargo:warning=      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cargo:warning=libtinyfiledialogs/tinyfiledialogs.c: In function ‘tkinter3Present’:
+cargo:warning=libtinyfiledialogs/tinyfiledialogs.c:4021:55: warning: ‘%s’ directive writing up to 255 bytes into a region of size between 240 and 255 [-Wformat-overflow=]
+cargo:warning= 4021 |                         sprintf( lPythonCommand , "%s %s" , gPython3Name , lPythonParams ) ;
+cargo:warning=      |                                                       ^~                   ~~~~~~~~~~~~~
+cargo:warning=libtinyfiledialogs/tinyfiledialogs.c:4021:25: note: ‘sprintf’ output between 2 and 272 bytes into a destination of size 256
+cargo:warning= 4021 |                         sprintf( lPythonCommand , "%s %s" , gPython3Name , lPythonParams ) ;
+cargo:warning=      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cargo:warning=libtinyfiledialogs/tinyfiledialogs.c: In function ‘pythonDbusPresent’:
+cargo:warning=libtinyfiledialogs/tinyfiledialogs.c:4045:55: warning: ‘%s’ directive writing up to 255 bytes into a region of size between 240 and 255 [-Wformat-overflow=]
+cargo:warning= 4045 |                         sprintf( lPythonCommand , "%s %s" , gPythonName , lPythonParams ) ;
+cargo:warning=      |                                                       ^~                  ~~~~~~~~~~~~~
+cargo:warning=libtinyfiledialogs/tinyfiledialogs.c:4045:25: note: ‘sprintf’ output between 2 and 272 bytes into a destination of size 256
+cargo:warning= 4045 |                         sprintf( lPythonCommand , "%s %s" , gPythonName , lPythonParams ) ;
+cargo:warning=      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cargo:warning=libtinyfiledialogs/tinyfiledialogs.c:4052:55: warning: ‘%s’ directive writing up to 255 bytes into a region of size between 240 and 255 [-Wformat-overflow=]
+cargo:warning= 4052 |                         sprintf( lPythonCommand , "%s %s" , gPythonName , lPythonParams ) ;
+cargo:warning=      |                                                       ^~                  ~~~~~~~~~~~~~
+cargo:warning=libtinyfiledialogs/tinyfiledialogs.c:4052:25: note: ‘sprintf’ output between 2 and 272 bytes into a destination of size 256
+cargo:warning= 4052 |                         sprintf( lPythonCommand , "%s %s" , gPythonName , lPythonParams ) ;
+cargo:warning=      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cargo:warning=COLLECT_GCC_OPTIONS='-O0' '-ffunction-sections' '-fdata-sections' '-fPIC' '-g' '-fno-omit-frame-pointer' '-m64' '-Wall' '-Wextra' '-v' '-o' '/home/nullrequest/egee-tools/distro-delves/custom_tools/custom_app/target/rls/debug/build/tinyfiledialogs-5a543a352aafdf70/out/libtinyfiledialogs/tinyfiledialogs.o' '-c' '-mtune=generic' '-march=x86-64'
+cargo:warning= as -v --64 -o /home/nullrequest/egee-tools/distro-delves/custom_tools/custom_app/target/rls/debug/build/tinyfiledialogs-5a543a352aafdf70/out/libtinyfiledialogs/tinyfiledialogs.o /tmp/ccM0hL0Z.s
+cargo:warning=GNU assembler version 2.35 (x86_64-pc-linux-gnu) using BFD version (GNU Binutils) 2.35
+cargo:warning=COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/
+cargo:warning=LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../:/lib/:/usr/lib/
+cargo:warning=COLLECT_GCC_OPTIONS='-O0' '-ffunction-sections' '-fdata-sections' '-fPIC' '-g' '-fno-omit-frame-pointer' '-m64' '-Wall' '-Wextra' '-v' '-o' '/home/nullrequest/egee-tools/distro-delves/custom_tools/custom_app/target/rls/debug/build/tinyfiledialogs-5a543a352aafdf70/out/libtinyfiledialogs/tinyfiledialogs.o' '-c' '-mtune=generic' '-march=x86-64'
+exit code: 0
+AR_x86_64-unknown-linux-gnu = None
+AR_x86_64_unknown_linux_gnu = None
+HOST_AR = None
+AR = None
+running: "ar" "crs" "/home/nullrequest/egee-tools/distro-delves/custom_tools/custom_app/target/rls/debug/build/tinyfiledialogs-5a543a352aafdf70/out/libtinyfiledialogs.a" "/home/nullrequest/egee-tools/distro-delves/custom_tools/custom_app/target/rls/debug/build/tinyfiledialogs-5a543a352aafdf70/out/libtinyfiledialogs/tinyfiledialogs.o"
+exit code: 0
+cargo:rustc-link-lib=static=tinyfiledialogs
+cargo:rustc-link-search=native=/home/nullrequest/egee-tools/distro-delves/custom_tools/custom_app/target/rls/debug/build/tinyfiledialogs-5a543a352aafdf70/out

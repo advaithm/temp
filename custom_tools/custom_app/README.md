@@ -1,0 +1,3 @@
+# Webview cpu stress test
+
+This is a rust based gui application meant to front end stress_cpu_x64 a thrown togather cpu stresser. The idea behind this came to me when Egee asked if he could front end the application in electron. I found electron to be overly complicated and wanted to create a possible solution. Thus this project was born. This use less ram then a  regular electron application while being a easy to create gui as it uses html+css+js on the frontend
