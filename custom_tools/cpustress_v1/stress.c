@@ -72,8 +72,9 @@ int main(int argc, char *argv[])
                 exit(1);
             }
 
-            if (computed_values[j])
-                printf("Prime Number Found: %d\n", (i * computation_thread_count) + j);
+            if (computed_values[j]){
+            }
+              
         }
     }
     exit(0);
