@@ -1,4 +1,6 @@
 .PHONY: webserver
+DESTDIR=AppDir
+
 
 stress:
 	cd ../cpustress_v1/ && make && cp stress_cpu_x64 ../custom_app/ && cd ../custom_app/

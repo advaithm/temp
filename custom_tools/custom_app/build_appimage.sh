@@ -9,12 +9,12 @@ TEMP_BASE=/tmp
 BUILD_DIR=$(mktemp -d -p "$TEMP_BASE" appimage-build-XXXXXX)
 
 # make sure to clean up build dir, even if errors occur
-cleanup () {
-    if [ -d "$BUILD_DIR" ]; then
-        rm -rf "$BUILD_DIR"
-    fi
-}
-trap cleanup EXIT
+#cleanup () {
+ #   if [ -d "$BUILD_DIR" ]; then
+  #      rm -rf "$BUILD_DIR"
+   # fi
+#}
+#trap cleanup EXIT
 
 # store repo root as variable
 REPO_ROOT=$(readlink -f $(dirname $(dirname $0)))
@@ -29,16 +29,15 @@ git clone https://github.com/advaithm/temp.git
 cd $BUILD_DIR/temp/custom_tools/custom_app
 
 # build project and install files into AppDir
-make stress
-make webserver  #last fail
-make app
-make install DESTDIR=AppDir
+make stress && make webserver && make app
+mkdir AppDir
+make install
 
 # now, build AppImage using linuxdeploy 
 wget https://github.com/linuxdeploy/linuxdeploy/releases/download/continuous/linuxdeploy-x86_64.AppImage
 
 # make them executable
-chmod +x linuxdeploy*.AppImage
+chmod +x linuxdeploy-x86_64.AppImage
 
 
 # initialize AppDir, bundle shared libraries for QtQuickApp, use Qt plugin to bundle additional resources, and build AppImage, all in one single command
