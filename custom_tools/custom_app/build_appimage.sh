@@ -4,17 +4,17 @@ set -x
 set -e
 
 # building in temporary directory to keep system clean
-TEMP_BASE=/tmp
+TEMP_BASE=/dev/shm
 
 BUILD_DIR=$(mktemp -d -p "$TEMP_BASE" appimage-build-XXXXXX)
 
 # make sure to clean up build dir, even if errors occur
-#cleanup () {
- #   if [ -d "$BUILD_DIR" ]; then
-  #      rm -rf "$BUILD_DIR"
-   # fi
-#}
-#trap cleanup EXIT
+cleanup () {
+    if [ -d "$BUILD_DIR" ]; then
+        rm -rf "$BUILD_DIR"
+    fi
+}
+trap cleanup EXIT
 
 # store repo root as variable
 REPO_ROOT=$(readlink -f $(dirname $(dirname $0)))
@@ -30,8 +30,10 @@ cd $BUILD_DIR/temp/custom_tools/custom_app
 
 # build project and install files into AppDir
 make stress && make webserver && make app
-mkdir AppDir
-make install
+mkdir AppDir/
+mkdir AppDir/usr/
+mkdir AppDir/usr/bin
+make install DESTDIR=AppDir
 
 # now, build AppImage using linuxdeploy 
 wget https://github.com/linuxdeploy/linuxdeploy/releases/download/continuous/linuxdeploy-x86_64.AppImage

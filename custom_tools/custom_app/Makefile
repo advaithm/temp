@@ -1,5 +1,4 @@
 .PHONY: webserver
-DESTDIR=AppDir
 
 
 stress:
@@ -13,6 +12,6 @@ app:
 	cargo build --release
 
 install:
-	cp stress_cpu_x64 $DESTDIR/usr/bin
-	cp target/release/custom_app $DESTDIR/usr/bin
-	cp webserver/target/debug/webserver $DESTDIR/usr/bin
+	cp stress_cpu_x64 $(DESTDIR)/usr/bin
+	cp target/release/custom_app $(DESTDIR)/usr/bin
+	cp webserver/target/debug/webserver $(DESTDIR)/usr/bin
