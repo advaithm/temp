@@ -34,6 +34,9 @@ mkdir AppDir/
 mkdir AppDir/usr/
 mkdir AppDir/usr/bin
 make install DESTDIR=AppDir
+cp egees.desktop AppDir
+cp -r css AppDir/usr/bin/
+cp -r js AppDir/usr/bin/
 
 # now, build AppImage using linuxdeploy 
 wget https://github.com/linuxdeploy/linuxdeploy/releases/download/continuous/linuxdeploy-x86_64.AppImage
