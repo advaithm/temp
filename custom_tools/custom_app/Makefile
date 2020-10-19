@@ -5,7 +5,7 @@ stress:
 
 webserver:
 	@echo run make stress to build stress_cpu_x64.	
-	cd webserver && cargo build && cd ..
+	cd webserver && rustup override set nightly  && cargo build && cd ..
 
 app: 
 	cargo build --release
