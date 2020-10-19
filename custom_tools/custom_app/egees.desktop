@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Nuclear
+Comment=A custom app used by youtuber egee.
+Exec="/usr/bin/custom_app"
+Type=Application
+Categories=utilty;
