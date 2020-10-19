@@ -4,12 +4,7 @@ set -x
 set -e
 
 # building in temporary directory to keep system clean
-# use RAM disk if possible (as in: not building on CI system like Travis, and RAM disk is available)
-if [ "$CI" == "" ] && [ -d /dev/shm ]; then
-    TEMP_BASE=/dev/shm
-else
-    TEMP_BASE=/tmp
-fi
+TEMP_BASE=/tmp
 
 BUILD_DIR=$(mktemp -d -p "$TEMP_BASE" appimage-build-XXXXXX)
 
@@ -35,12 +30,11 @@ cd $BUILD_DIR/temp/custom_tools/custom_app
 
 # build project and install files into AppDir
 make stress
-make webserver
+make webserver  #last fail
 make app
 make install DESTDIR=AppDir
 
-# now, build AppImage using linuxdeploy and linuxdeploy-plugin-qt
-# download linuxdeploy and its Qt plugin
+# now, build AppImage using linuxdeploy 
 wget https://github.com/linuxdeploy/linuxdeploy/releases/download/continuous/linuxdeploy-x86_64.AppImage
 
 # make them executable
