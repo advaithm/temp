@@ -35,6 +35,7 @@ mkdir AppDir/usr/
 mkdir AppDir/usr/bin
 make install DESTDIR=AppDir
 cp egees.desktop AppDir
+cp icon.png AppDir
 cp -r css AppDir/usr/bin/
 cp -r js AppDir/usr/bin/
 
