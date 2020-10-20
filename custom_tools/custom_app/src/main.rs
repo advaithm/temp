@@ -28,7 +28,7 @@ fn main() {
     );
     let _webserver = Command::new("bash")
         .arg("-c")
-        .arg("./webserver/target/debug/webserver")
+        .arg("webserver")
         .spawn()
         .expect("webserver was not able to start");
     web_view::builder()
