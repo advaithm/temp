@@ -2,8 +2,8 @@ use std::fs::read_to_string;
 use std::process::Command;
 use web_view::*;
 fn main() {
-    let js = read_to_string("/usr/bin/js/app.js").expect("Something went wrong reading the js/app.js");
-    let css = read_to_string("/usr/binn/css/app.css").expect("Something went wrong reading css/app.css");
+    let js = read_to_string("js/app.js").expect("Something went wrong reading the js/app.js");
+    let css = read_to_string("css/app.css").expect("Something went wrong reading css/app.css");
     let html_content = format!(
         r#"
     <html>
