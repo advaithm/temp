@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Egeesapp
 Icon=icon
-Exec="custom_app"
+Exec=custom_app
 Type=Application
 Categories=Utility;
