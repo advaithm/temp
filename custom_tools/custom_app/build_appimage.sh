@@ -33,6 +33,7 @@ make stress && make webserver && make app
 mkdir AppDir/
 mkdir AppDir/usr/
 mkdir AppDir/usr/bin
+mkdir Appdir/AppRun
 make install DESTDIR=AppDir
 cp egees.desktop AppDir
 cp icon.png AppDir
