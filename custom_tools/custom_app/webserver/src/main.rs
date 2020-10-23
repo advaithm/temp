@@ -41,7 +41,7 @@ impl Fairing for CORS {
 fn hammer(threads: u64) -> Json<&'static str> {
     let _hammer = match Command::new("sh")
         .arg("-c")
-        .arg(format!("./stress_cpu_x64 {}", threads))
+        .arg(format!("stress_cpu_x64 {}", threads))
         .spawn()
     {
         Ok(_) => return Json(r#"{"status":"success"}"#),
