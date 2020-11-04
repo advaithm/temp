@@ -2,8 +2,8 @@ use std::fs::read_to_string;
 use std::process::Command;
 use web_view::*;
 fn main() {
-    let js = read_to_string("js/app.js").expect("Something went wrong reading the js/app.js");
-    let css = read_to_string("css/app.css").expect("Something went wrong reading css/app.css");
+    let js = read_to_string("././usr/bin/js/app.js").expect("Something went wrong reading the js/app.js");
+    let css = read_to_string("././usr/bin/css/app.css").expect("Something went wrong reading css/app.css");
     let html_content = format!(
         r#"
     <html>
@@ -28,7 +28,7 @@ fn main() {
     );
     let _webserver = Command::new("bash")
         .arg("-c")
-        .arg("webserver")
+        .arg("././usr/bin/webserver")
         .spawn()
         .expect("webserver was not able to start");
     web_view::builder()
